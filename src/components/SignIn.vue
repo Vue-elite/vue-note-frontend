@@ -1,16 +1,14 @@
 <template>
   <div>
     <h1>{{ pageName }} page</h1>
-    <home-page-button></home-page-button>
+    <HomePageButton></HomePageButton>
   </div>
 </template>
 
 <script>
-import HomePageButton from './_base-HomePageButton';
 
 export default {
   name: 'SignIn',
-  components: { HomePageButton },
   data() {
     return {
       pageName: '',
