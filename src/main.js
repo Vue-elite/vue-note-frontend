@@ -2,7 +2,6 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import '@/setup/_globals';
 import Vue from 'vue';
-// import App from './App';
 import App from '@/App';
 import router from '@/router';
 

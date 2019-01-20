@@ -9,7 +9,7 @@ const requireComponent = require.context(
   // Look for files in the current directory
   '../components/',
   // Do not look in subdirectories
-  false,
+  true,
   // Only include "_base-" prefixed .vue files
   /.vue$/,
 );
@@ -19,9 +19,10 @@ requireComponent.keys()
   .forEach((fileName) => {
   // Get the component config
     const componentConfig = requireComponent(fileName);
-
     // Get the PascalCase version of the component name
-    const componentName = fileName.replace(/^\.\//, '').replace(/\.\w+$/, '');
+    // const componentName = fileName.replace(/^\.\//, '').replace(/\.\w+$/, '');
+    const componentName = componentConfig.default ?
+      componentConfig.default.name : componentConfig.name;
     // Globally register the component
     Vue.component(componentName, componentConfig.default || componentConfig);
   });

@@ -1,9 +1,12 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <Header></Header>
     <router-view/>
   </div>
 </template>
+
+<link rel="stylesheet"
+      href="//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons">
 
 <script>
 export default {

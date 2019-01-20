@@ -3,10 +3,10 @@
     <h1>{{ msg }}</h1>
     <ul>
       <li>
-        <router-link to="/sign-in">Sign-in</router-link>
+        <router-link to="/Register">Register</router-link>
       </li>
       <li>
-        <router-link to="/Register">Register</router-link>
+        <router-link to="/sign-in">Sign-in</router-link>
       </li>
       <li>
         <router-link to="/boards">Boards</router-link>
@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Home',
   data() {
     return {
       msg: 'Welcome to Your Vue.js App',
