@@ -1,14 +1,22 @@
 <template>
   <span>
-    <label :for=label>{{ label }}</label>
-    <input type="text" :id=id>
+    <label :for="id">{{ label }}</label>
+    <input type="text" :id="id" v-model="inputVal">
   </span>
 </template>
 
 <script>
 export default {
   name: 'Input',
-  props: ['label', 'id'],
+  props: ['label', 'id', 'value'],
+  data() {
+    return { inputVal: this.value };
+  },
+  watch: {
+    inputVal(val) {
+      this.$emit('input', val);
+    },
+  },
 };
 </script>
 
